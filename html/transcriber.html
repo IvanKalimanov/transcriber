@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body class="bg-dark text-white">
+    <h3>Приветствую тебя на главной странице транскрайбера! Тут ты можешь получить текст речи из аудиофайла</h3>
+    <form 
+    enctype="multipart/form-data"
+    method="post"
+    action="http://localhost:8080/transcribe">
+        <div class="mb-3">
+            <br>
+            <label for="formFile" class="form-label">Загрузите файл с речью</label>
+        <p><input type="file" id="audioUpload" name="audio" multiple accept="audio/mp3" class="form-control"  id="formFile"></p>
+            <input type="submit" class="form-control btn btn-danger" value="Отправить"> 
+        </div>
+    </form>
+
+    
+</body>
+
+</html>
