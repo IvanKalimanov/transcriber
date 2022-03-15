@@ -9,8 +9,6 @@ model = Model('vosk-model-small-ru-0.22')
 inputfile = sys.argv[1]
 wavfile = inputfile + '.wav'
 
-print(inputfile)
-print(os.getcwd())
 subprocess.call(f"ffmpeg -y -i {inputfile} -ar 48000 -ac 1 -f wav {wavfile}")
 
 wf = wave.open(wavfile, "rb")

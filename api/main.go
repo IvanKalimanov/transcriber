@@ -44,6 +44,8 @@ func Transcribe(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("File Size: %+v\n", handler.Size)
 	fmt.Printf("MIME Header: %+v\n", handler.Header)
 
+	dir, _ := os.Getwd()
+
 	os.Chdir("../")
 
 	// read all of the contents of uploaded file into a
@@ -94,6 +96,8 @@ func Transcribe(w http.ResponseWriter, r *http.Request) {
 
 	// return that we have successfully uploaded our file!
 	fmt.Fprint(w, string(result))
+
+	os.Chdir(dir)
 }
 
 func setupRoutes() {
