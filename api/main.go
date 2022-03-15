@@ -74,7 +74,7 @@ func Transcribe(w http.ResponseWriter, r *http.Request) {
 	// Print the output
 	fmt.Println(string(stdout))
 
-	f, e := os.Open("api/output.txt")
+	f, e := os.Open("output.txt")
 
 	if e != nil {
 		fmt.Println(err.Error())
